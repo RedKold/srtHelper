@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>568</width>
-    <height>499</height>
+    <height>256</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,9 +16,9 @@
   <widget class="QLineEdit" name="inputLineEdit">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>80</y>
-     <width>291</width>
+     <x>20</x>
+     <y>110</y>
+     <width>341</width>
      <height>51</height>
     </rect>
    </property>
@@ -26,9 +26,9 @@
   <widget class="QLabel" name="inputLabel">
    <property name="geometry">
     <rect>
-     <x>60</x>
+     <x>20</x>
      <y>20</y>
-     <width>311</width>
+     <width>501</width>
      <height>61</height>
     </rect>
    </property>
@@ -45,44 +45,72 @@
   <widget class="QPushButton" name="inputPush">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>150</y>
+     <x>410</x>
+     <y>190</y>
      <width>75</width>
-     <height>23</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
     <string>确认</string>
    </property>
   </widget>
-  <widget class="QListView" name="answerlist">
+  <widget class="QSpinBox" name="amtspinBox">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>210</y>
-     <width>256</width>
-     <height>192</height>
+     <x>410</x>
+     <y>140</y>
+     <width>42</width>
+     <height>22</height>
     </rect>
+   </property>
+   <property name="minimum">
+    <number>2</number>
+   </property>
+   <property name="maximum">
+    <number>10</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>110</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>显示台词数量</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="selectSrtButton">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>70</y>
+     <width>161</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>选择字幕(.srt)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="FilenameLabel">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>50</y>
+     <width>54</width>
+     <height>12</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>inputPush</sender>
-   <signal>clicked()</signal>
-   <receiver>answerlist</receiver>
-   <slot>doItemsLayout()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>388</x>
-     <y>163</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>211</x>
-     <y>297</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

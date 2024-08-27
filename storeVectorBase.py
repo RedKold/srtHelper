@@ -35,4 +35,4 @@ def generate_and_save_embeddings(srt_file, model_name='paraphrase-multilingual-M
 if __name__ == "__main__":
     # 生成并保存字幕数据库
     srt_file = 'srt/Frozen_chs.srt'  # 替换为你的 SRT 文件路径
-    generate_and_save_embeddings(srt_file)
+    generate_and_save_embeddings(srt_file,db_file=f'{srt_file}_db.pkl')
