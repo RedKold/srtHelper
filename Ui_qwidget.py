@@ -11,46 +11,46 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(568, 256)
-        self.inputLineEdit = QtWidgets.QLineEdit(Form)
+class Ui_SrtHelper(object):
+    def setupUi(self, SrtHelper):
+        SrtHelper.setObjectName("SrtHelper")
+        SrtHelper.resize(568, 256)
+        self.inputLineEdit = QtWidgets.QLineEdit(SrtHelper)
         self.inputLineEdit.setGeometry(QtCore.QRect(20, 110, 341, 51))
         self.inputLineEdit.setObjectName("inputLineEdit")
-        self.inputLabel = QtWidgets.QLabel(Form)
+        self.inputLabel = QtWidgets.QLabel(SrtHelper)
         self.inputLabel.setGeometry(QtCore.QRect(20, 20, 501, 61))
         font = QtGui.QFont()
         font.setFamily("钉钉进步体")
         font.setPointSize(16)
         self.inputLabel.setFont(font)
         self.inputLabel.setObjectName("inputLabel")
-        self.inputPush = QtWidgets.QPushButton(Form)
+        self.inputPush = QtWidgets.QPushButton(SrtHelper)
         self.inputPush.setGeometry(QtCore.QRect(410, 190, 75, 31))
         self.inputPush.setObjectName("inputPush")
-        self.amtspinBox = QtWidgets.QSpinBox(Form)
+        self.amtspinBox = QtWidgets.QSpinBox(SrtHelper)
         self.amtspinBox.setGeometry(QtCore.QRect(410, 140, 42, 22))
         self.amtspinBox.setMinimum(2)
         self.amtspinBox.setMaximum(10)
         self.amtspinBox.setObjectName("amtspinBox")
-        self.label = QtWidgets.QLabel(Form)
+        self.label = QtWidgets.QLabel(SrtHelper)
         self.label.setGeometry(QtCore.QRect(400, 110, 121, 16))
         self.label.setObjectName("label")
-        self.selectSrtButton = QtWidgets.QPushButton(Form)
+        self.selectSrtButton = QtWidgets.QPushButton(SrtHelper)
         self.selectSrtButton.setGeometry(QtCore.QRect(360, 70, 161, 23))
         self.selectSrtButton.setObjectName("selectSrtButton")
-        self.FilenameLabel = QtWidgets.QLabel(Form)
-        self.FilenameLabel.setGeometry(QtCore.QRect(360, 50, 54, 12))
+        self.FilenameLabel = QtWidgets.QLabel(SrtHelper)
+        self.FilenameLabel.setGeometry(QtCore.QRect(10, 80, 311, 16))
         self.FilenameLabel.setText("")
         self.FilenameLabel.setObjectName("FilenameLabel")
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(SrtHelper)
+        QtCore.QMetaObject.connectSlotsByName(SrtHelper)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, SrtHelper):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.inputLabel.setText(_translate("Form", "请输入你想查询的台词"))
-        self.inputPush.setText(_translate("Form", "确认"))
-        self.label.setText(_translate("Form", "显示台词数量"))
-        self.selectSrtButton.setText(_translate("Form", "选择字幕(.srt)"))
+        SrtHelper.setWindowTitle(_translate("SrtHelper", "SrtHelper"))
+        self.inputLabel.setText(_translate("SrtHelper", "请输入你想查询的台词"))
+        self.inputPush.setText(_translate("SrtHelper", "确认"))
+        self.label.setText(_translate("SrtHelper", "显示台词数量"))
+        self.selectSrtButton.setText(_translate("SrtHelper", "选择字幕(.srt)"))

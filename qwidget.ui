@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>SrtHelper</class>
+ <widget class="QWidget" name="SrtHelper">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>SrtHelper</string>
   </property>
   <widget class="QLineEdit" name="inputLineEdit">
    <property name="geometry">
@@ -100,10 +100,10 @@
   <widget class="QLabel" name="FilenameLabel">
    <property name="geometry">
     <rect>
-     <x>360</x>
-     <y>50</y>
-     <width>54</width>
-     <height>12</height>
+     <x>10</x>
+     <y>80</y>
+     <width>311</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">

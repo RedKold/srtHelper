@@ -2,19 +2,20 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QWidget, QApplication, QVBoxLayout, QLabel, QPushButton, QMainWindow
 import sys
 import setVectorBase
-from Ui_qwidget import Ui_Form
+from Ui_qwidget import Ui_SrtHelper
 from PyQt5.QtWidgets import QFileDialog
 import os
 import storeVectorBase
 
 #主窗口类，继承自qwideget
-class MyWidget(QWidget, Ui_Form):
+class MyWidget(QWidget, Ui_SrtHelper):
     def __init__(self, parent=None):
         super(MyWidget, self).__init__(parent)
         self.setupUi(self)
         self.inputPush.clicked.connect(self.inputPush_clicked)  # 将点击事件绑定到类方法
         #init the default srt path
         self.FilenameLabel.setText("/srt/Frozen_chs.srt")
+        
         # 初始化 SubtitleViewer 为 None
         self.viewer = None
 
@@ -44,8 +45,11 @@ class MyWidget(QWidget, Ui_Form):
         filename=self.FilenameLabel.text()
         db_filename=f"{filename}_db.pkl"
         if not os.path.exists(db_filename):
+            print("不存在现有的数据库，创建新数据库中")
             storeVectorBase.generate_and_save_embeddings(filename,db_file=db_filename)
-
+        else:
+            print("已存在相关数据库，为你检索中")
+            
         top_k_lines, top_k_timestamps, top_k_similarities = setVectorBase.find_most_similar(query,k,db_file=db_filename)
 
         # 创建并显示 SubtitleViewer
