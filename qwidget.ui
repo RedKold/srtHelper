@@ -88,7 +88,7 @@
    <property name="geometry">
     <rect>
      <x>360</x>
-     <y>70</y>
+     <y>30</y>
      <width>161</width>
      <height>23</height>
     </rect>
@@ -98,6 +98,9 @@
    </property>
   </widget>
   <widget class="QLabel" name="FilenameLabel">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -108,6 +111,19 @@
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="selectDirecButton">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>70</y>
+     <width>161</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>选择字幕文件夹</string>
    </property>
   </widget>
  </widget>
